@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/src/sample_feature/post.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'sample_feature/post_detail_page.dart';
 import 'sample_feature/posts_page.dart';
-import 'sample_feature/sample_item_details_view.dart';
 
 class App extends StatelessWidget {
   const App({
@@ -59,8 +60,10 @@ class App extends StatelessWidget {
             switch (routeSettings.name) {
               //case SettingsView.routeName:
               //return SettingsView(controller: settingsController);
-              case SampleItemDetailsView.routeName:
-                return const SampleItemDetailsView();
+              case PostDetailPage.routeName:
+                return PostDetailPage(
+                  post: routeSettings.arguments as Post,
+                );
               case PostsPage.routeName:
               default:
                 return const PostsPage(

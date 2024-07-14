@@ -48,11 +48,11 @@ class _PostsPageState extends State<PostsPage> {
       }
 
       setState(() {
-        pageState = LoadedState(posts: posts);
+        pageState = LoadedPostsState(posts: posts);
       });
     } catch (_) {
       setState(() {
-        pageState = ErrorState();
+        pageState = const ErrorState("Error loading posts.");
       });
     }
   }

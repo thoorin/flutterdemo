@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter_demo/src/sample_feature/dto/comment_dto.dart';
 import 'package:flutter_demo/src/sample_feature/dto/post_dto.dart';
 import 'package:flutter_demo/src/sample_feature/dto/user_dto.dart';
 import 'package:http/http.dart';
@@ -14,8 +15,8 @@ abstract class Requests {
   static CollectionResult<UserDto> getUsers() =>
       _Requests._getCollection('users', UserDto.fromJson);
 
-  static Future<RequestResult<PostDto>> getPost() =>
-      _Requests._getDocument('posts/1', PostDto.fromJson);
+  static CollectionResult<CommentDto> getComments(int postId) =>
+      _Requests._getCollection('posts/$postId/comments', CommentDto.fromJson);
 }
 
 abstract class _Requests {
