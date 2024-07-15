@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/dto/post_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/user_dto.dart';
-import 'package:flutter_demo/src/sample_feature/page_state.dart';
-import 'package:flutter_demo/src/sample_feature/post.dart';
-import 'package:flutter_demo/src/sample_feature/requests.dart';
+import 'package:flutter_demo/src/api/dto/post_dto.dart';
+import 'package:flutter_demo/src/api/dto/user_dto.dart';
+import 'package:flutter_demo/src/api/requests.dart';
+import 'package:flutter_demo/src/page_state.dart';
+import 'package:flutter_demo/src/posts_page/post.dart';
 
 class PostsPage extends StatefulWidget {
   const PostsPage({

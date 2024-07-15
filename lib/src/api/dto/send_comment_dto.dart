@@ -1,25 +1,22 @@
-import 'package:flutter_demo/src/sample_feature/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/dto.dart';
 
-class CommentDto implements Dto {
+class SendCommentDto implements Dto {
   final int postId;
-  final int id;
   final String name;
   final String email;
   final String body;
 
-  const CommentDto({
+  const SendCommentDto({
     required this.postId,
     required this.name,
     required this.email,
     required this.body,
-    required this.id,
   });
 
   @override
-  factory CommentDto.fromJson(Map<String, dynamic> json) {
-    return CommentDto(
+  factory SendCommentDto.fromJson(Map<String, dynamic> json) {
+    return SendCommentDto(
       postId: json['postId'],
-      id: json['id'],
       name: json['name'],
       email: json['email'],
       body: json['body'],
@@ -28,8 +25,7 @@ class CommentDto implements Dto {
 
   @override
   Map<String, dynamic> toJson() => {
-        'postId': postId,
-        'id': id,
+        'postId': postId.toString(),
         'name': name,
         'email': email,
         'body': body,

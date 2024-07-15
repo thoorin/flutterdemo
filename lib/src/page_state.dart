@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/comment_row.dart';
-import 'package:flutter_demo/src/sample_feature/dto/comment_dto.dart';
-import 'package:flutter_demo/src/sample_feature/post.dart';
-import 'package:flutter_demo/src/sample_feature/post_detail_page.dart';
-import 'package:flutter_demo/src/sample_feature/post_row.dart';
+import 'package:flutter_demo/src/api/dto/comment_dto.dart';
+import 'package:flutter_demo/src/post_detail_page/comment_row.dart';
+import 'package:flutter_demo/src/post_detail_page/post_detail_page.dart';
+import 'package:flutter_demo/src/posts_page/post.dart';
+import 'package:flutter_demo/src/posts_page/post_row.dart';
 
 abstract interface class PageState {
   Widget getWidget();

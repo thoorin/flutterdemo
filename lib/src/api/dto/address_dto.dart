@@ -1,5 +1,5 @@
-import 'package:flutter_demo/src/sample_feature/dto/dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/geo_dto.dart';
+import 'package:flutter_demo/src/api/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/geo_dto.dart';
 
 class AddressDto implements Dto {
   final String street;

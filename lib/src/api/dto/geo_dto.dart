@@ -1,4 +1,4 @@
-import 'package:flutter_demo/src/sample_feature/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/dto.dart';
 
 class GeoDto implements Dto {
   final String lat;

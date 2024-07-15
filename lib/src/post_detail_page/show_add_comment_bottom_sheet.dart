@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/dto/send_comment_dto.dart';
-import 'package:flutter_demo/src/sample_feature/requests.dart';
+import 'package:flutter_demo/src/api/dto/send_comment_dto.dart';
+import 'package:flutter_demo/src/api/requests.dart';
 
 Future<dynamic> showAddCommentBottomSheet(
   BuildContext context, {

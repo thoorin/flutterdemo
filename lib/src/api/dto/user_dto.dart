@@ -1,6 +1,6 @@
-import 'package:flutter_demo/src/sample_feature/dto/address_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/company_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/address_dto.dart';
+import 'package:flutter_demo/src/api/dto/company_dto.dart';
+import 'package:flutter_demo/src/api/dto/dto.dart';
 
 class UserDto implements Dto {
   final int id;

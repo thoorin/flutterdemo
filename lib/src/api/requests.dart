@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter_demo/src/sample_feature/dto/comment_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/post_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/send_comment_dto.dart';
-import 'package:flutter_demo/src/sample_feature/dto/user_dto.dart';
+import 'package:flutter_demo/src/api/dto/comment_dto.dart';
+import 'package:flutter_demo/src/api/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/post_dto.dart';
+import 'package:flutter_demo/src/api/dto/send_comment_dto.dart';
+import 'package:flutter_demo/src/api/dto/user_dto.dart';
 import 'package:http/http.dart';
 
 typedef RequestResult<T> = ({int statusCode, T? data});

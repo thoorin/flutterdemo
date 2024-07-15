@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/dto/comment_dto.dart';
-import 'package:flutter_demo/src/sample_feature/page_state.dart';
-import 'package:flutter_demo/src/sample_feature/post.dart';
-import 'package:flutter_demo/src/sample_feature/post_row.dart';
-import 'package:flutter_demo/src/sample_feature/requests.dart';
-import 'package:flutter_demo/src/sample_feature/show_add_comment_bottom_sheet.dart';
+import 'package:flutter_demo/src/api/dto/comment_dto.dart';
+import 'package:flutter_demo/src/api/requests.dart';
+import 'package:flutter_demo/src/page_state.dart';
+import 'package:flutter_demo/src/post_detail_page/show_add_comment_bottom_sheet.dart';
+import 'package:flutter_demo/src/posts_page/post.dart';
+import 'package:flutter_demo/src/posts_page/post_row.dart';
 
 class PostDetailPage extends StatefulWidget {
   const PostDetailPage({super.key, required this.post});

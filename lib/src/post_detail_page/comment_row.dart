@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/dto/comment_dto.dart';
+import 'package:flutter_demo/src/api/dto/comment_dto.dart';
 
 class CommentRow extends StatelessWidget {
   const CommentRow({

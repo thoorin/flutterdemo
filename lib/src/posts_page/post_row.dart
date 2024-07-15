@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/sample_feature/post.dart';
+import 'package:flutter_demo/src/posts_page/post.dart';
 
 class PostRow extends StatelessWidget {
   const PostRow({
