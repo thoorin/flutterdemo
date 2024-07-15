@@ -36,4 +36,16 @@ class UserDto implements Dto {
       company: CompanyDto.fromJson(json['company']),
     );
   }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'id': id,
+        'name': name,
+        'username': username,
+        'email': email,
+        'address': address.toJson(),
+        'phone': phone,
+        'website': website,
+        'company': company.toJson()
+      };
 }

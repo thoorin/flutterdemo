@@ -16,4 +16,7 @@ class GeoDto implements Dto {
       lng: json['lng'],
     );
   }
+
+  @override
+  Map<String, dynamic> toJson() => {'lat': lat, 'lng': lng};
 }

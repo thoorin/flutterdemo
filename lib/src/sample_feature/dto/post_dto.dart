@@ -22,4 +22,12 @@ class PostDto implements Dto {
       body: json['body'],
     );
   }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'userId': userId,
+        'id': id,
+        'title': title,
+        'body': body,
+      };
 }

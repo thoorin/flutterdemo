@@ -26,4 +26,13 @@ class AddressDto implements Dto {
       geo: GeoDto.fromJson(json['geo']),
     );
   }
+
+  @override
+  Map<String, dynamic> toJson() => {
+        'street': street,
+        'suite': suite,
+        'city': city,
+        'zipcode': zipcode,
+        'geo': geo.toJson(),
+      };
 }

@@ -19,4 +19,8 @@ class CompanyDto implements Dto {
       bs: json['bs'],
     );
   }
+
+  @override
+  Map<String, dynamic> toJson() =>
+      {'name': name, 'catchPhrase': catchPhrase, 'bs': bs};
 }

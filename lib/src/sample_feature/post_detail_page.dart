@@ -4,6 +4,7 @@ import 'package:flutter_demo/src/sample_feature/page_state.dart';
 import 'package:flutter_demo/src/sample_feature/post.dart';
 import 'package:flutter_demo/src/sample_feature/post_row.dart';
 import 'package:flutter_demo/src/sample_feature/requests.dart';
+import 'package:flutter_demo/src/sample_feature/show_add_comment_bottom_sheet.dart';
 
 class PostDetailPage extends StatefulWidget {
   const PostDetailPage({super.key, required this.post});
@@ -19,7 +20,7 @@ class _PostDetailPageState extends State<PostDetailPage> {
   bool isInitialized = false;
   PageState pageState = LoadingState();
 
-  _loadComments() async {
+  void _loadComments() async {
     try {
       RequestResult<List<CommentDto>> getCommentsResult =
           await Requests.getComments(widget.post.id);
@@ -52,6 +53,12 @@ class _PostDetailPageState extends State<PostDetailPage> {
       body: Column(
         children: [
           PostRow(post: widget.post),
+          ElevatedButton(
+            onPressed: () {
+              showAddCommentBottomSheet(context, postId: widget.post.id);
+            },
+            child: const Text('Reply'),
+          ),
           Expanded(child: pageState.getWidget()),
         ],
       ),
