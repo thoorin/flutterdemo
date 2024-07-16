@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:flutter_demo/src/api/dto/album_dto.dart';
 import 'package:flutter_demo/src/api/dto/comment_dto.dart';
 import 'package:flutter_demo/src/api/dto/dto.dart';
+import 'package:flutter_demo/src/api/dto/photo_dto.dart';
 import 'package:flutter_demo/src/api/dto/post_dto.dart';
 import 'package:flutter_demo/src/api/dto/send_comment_dto.dart';
 import 'package:flutter_demo/src/api/dto/user_dto.dart';
@@ -22,6 +24,12 @@ abstract class Requests {
 
   static Future<RequestResult> postComment(SendCommentDto comment) =>
       _Requests._postDocument('posts', comment);
+
+  static CollectionResult<AlbumDto> getAlbums(int userId) =>
+      _Requests._getCollection('albums', AlbumDto.fromJson);
+
+  static CollectionResult<PhotoDto> getAlbumPhotos(int albumId) =>
+      _Requests._getCollection('albums/$albumId/photos', PhotoDto.fromJson);
 }
 
 abstract class _Requests {

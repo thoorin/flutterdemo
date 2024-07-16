@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/src/album_detail_page/album_detail_page.dart';
+import 'package:flutter_demo/src/albums/albums_page.dart';
 import 'package:flutter_demo/src/posts_page/post.dart';
 
 import 'post_detail_page/post_detail_page.dart';
@@ -24,8 +26,16 @@ class App extends StatelessWidget {
                 return PostDetailPage(
                   post: routeSettings.arguments as Post,
                 );
-              case PostsPage.routeName:
-              default:
+              case AlbumsPage.routeName:
+                return const AlbumsPage();
+              case AlbumDetailPage.routeName:
+                return AlbumDetailPage(
+                  arguments: routeSettings.arguments as ({
+                    int albumId,
+                    String albumTitle
+                  }),
+                );
+              case PostsPage.routeName || _:
                 return const PostsPage();
             }
           },

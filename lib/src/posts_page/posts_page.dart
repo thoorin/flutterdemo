@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/src/albums/albums_page.dart';
 import 'package:flutter_demo/src/api/dto/post_dto.dart';
 import 'package:flutter_demo/src/api/dto/user_dto.dart';
 import 'package:flutter_demo/src/api/requests.dart';
@@ -68,7 +69,17 @@ class _PostsPageState extends State<PostsPage> {
       appBar: AppBar(
         title: const Text('Posts'),
       ),
-      body: pageState.getWidget(),
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(AlbumsPage.routeName);
+            },
+            child: const Text('Albums'),
+          ),
+          Expanded(child: pageState.getWidget()),
+        ],
+      ),
     );
   }
 }
