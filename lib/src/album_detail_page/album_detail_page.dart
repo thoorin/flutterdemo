@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/api/dto/photo_dto.dart';
 import 'package:flutter_demo/src/api/requests.dart';
+import 'package:flutter_demo/src/main_navigation_bar.dart';
 import 'package:flutter_demo/src/page_state.dart';
 
 class AlbumDetailPage extends StatefulWidget {
@@ -49,6 +50,7 @@ class _AlbumDetailPageState extends State<AlbumDetailPage> {
     }
 
     return Scaffold(
+      bottomNavigationBar: const MainNavigationBar(),
       appBar: AppBar(
         title: Text(widget.arguments.albumTitle),
       ),

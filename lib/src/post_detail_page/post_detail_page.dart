@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/src/api/dto/comment_dto.dart';
 import 'package:flutter_demo/src/api/requests.dart';
+import 'package:flutter_demo/src/main_navigation_bar.dart';
 import 'package:flutter_demo/src/page_state.dart';
 import 'package:flutter_demo/src/post_detail_page/show_add_comment_bottom_sheet.dart';
 import 'package:flutter_demo/src/posts_page/post.dart';
@@ -47,6 +48,7 @@ class _PostDetailPageState extends State<PostDetailPage> {
     }
 
     return Scaffold(
+      bottomNavigationBar: const MainNavigationBar(),
       appBar: AppBar(
         title: const Text('Post Detail'),
       ),

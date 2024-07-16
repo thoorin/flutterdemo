@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/src/albums/albums_page.dart';
 import 'package:flutter_demo/src/api/dto/post_dto.dart';
 import 'package:flutter_demo/src/api/dto/user_dto.dart';
 import 'package:flutter_demo/src/api/requests.dart';
+import 'package:flutter_demo/src/main_navigation_bar.dart';
 import 'package:flutter_demo/src/page_state.dart';
 import 'package:flutter_demo/src/posts_page/post.dart';
 
@@ -20,6 +20,7 @@ class PostsPage extends StatefulWidget {
 class _PostsPageState extends State<PostsPage> {
   PageState pageState = LoadingState();
   bool isInitialized = false;
+  int selectedIndex = 0;
 
   List<Post> _buildPosts(List<PostDto> postsDto, List<UserDto> usersDto) {
     return postsDto.map((postDto) {
@@ -66,20 +67,12 @@ class _PostsPageState extends State<PostsPage> {
     }
 
     return Scaffold(
+      bottomNavigationBar: const MainNavigationBar(),
       appBar: AppBar(
         title: const Text('Posts'),
+        automaticallyImplyLeading: false,
       ),
-      body: Column(
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed(AlbumsPage.routeName);
-            },
-            child: const Text('Albums'),
-          ),
-          Expanded(child: pageState.getWidget()),
-        ],
-      ),
+      body: pageState.getWidget(),
     );
   }
 }
